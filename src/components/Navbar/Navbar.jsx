@@ -6,13 +6,13 @@ import {Link} from 'react-router-dom'
 export const Navbar = () => (
   <nav className={classes.nav}>
     <div className={classes.wrap}>
-      <Link to="/auth" className={`${classes.button} ${classes['button__auth']}`}>
+      <Link to="/sign-up" className={`${classes.button} ${classes['button__auth']}`}>
         <span>
           <img src="/assets/img/header/person.svg" /> 
           <span>Sign up</span>
         </span>
       </Link>
-      <Link to="/auth" className={`${classes.button}`}>
+      <Link to="/sign-in" className={`${classes.button}`}>
         <span>
           <img src="/assets/img/header/key.svg" /> 
           <span>Sign in</span>

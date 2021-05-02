@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #f6f6f6;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 6px 12px 6px 0;
+  height: 132px;
+  width: 100%;
+  max-width: calc(16.6667% - 12px);
+  justify-content: flex-end;
+
+  .img {
+    img {
+      width: 42px;
+      height: 42px;
+    }
+  }
+
+  .reserve {
+    font-size: 14px;
+    line-height: 16px;
+    color: rgb(24, 30, 69);
+    margin: 8px 0px 0px;
+  }
+
+  .name {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgb(57, 59, 83);
+    margin: 18px 0px 0px;
+    text-align: center;
+  }
+}

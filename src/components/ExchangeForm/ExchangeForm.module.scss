@@ -1,0 +1,47 @@
+.option {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  font-size: 20px;
+  padding: 13px 16px 13px 20px;
+  border-radius: 4px;
+  border: 1px solid rgb(178, 196, 214);
+  cursor: pointer;
+  position: relative;
+
+  .img {
+    margin-right: 17px;
+    img {
+      width: 28px
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    right: 24px;
+    margin-left: 7px;
+    transition: .3s ease;
+  }
+
+  &.active {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+
+    .arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dropdown {
+  overflow: auto;
+  max-height: 310px;
+  border: 1px solid rgb(178, 196, 214);
+
+  .option {
+    border-top-style: none !important;
+    font-size: 18px;
+    color: rgb(153, 150, 167);
+    border: none;
+  }
+}

@@ -11,8 +11,8 @@ export const Sidebar = () => {
     {icon: 'check', link: 'crypto-check', name: 'Crypto check', new: true},
     {icon: 'giveaway', link: 'giveaway', name: 'Giveaway', new: true},
     {icon: 'faq', link: 'faq', name: 'FAQ', new: false},
-    {icon: 'partner', link: 'parner', name: 'Parners', new: false},
-    {icon: 'bids', link: 'bids', name: 'Bids', new: false},
+    {icon: 'partner', link: 'parner', name: 'For parners', new: false},
+    {icon: 'bids', link: 'bids', name: 'History', new: false},
   ])
 
   return (
@@ -21,8 +21,12 @@ export const Sidebar = () => {
         {
           pages.map((page, idx) => (
             <li key={idx}>  
-              <NavLink to={`/${page.link}`} activeClassName={classes.active}>
-                <img src={`/assets/img/sidebar/${page.icon}.svg`} />
+              <NavLink to={`/${page.link}`} exact activeClassName={classes.active}>
+                <img style={{
+                  WebkitMask: `url(/assets/img/sidebar/${page.icon}.svg) no-repeat center`,
+                  width: 24, height: 24, backgroundColor: "#000"
+                }} 
+                />
                 <span>{page.name}</span>
                 {
                   page.new && (

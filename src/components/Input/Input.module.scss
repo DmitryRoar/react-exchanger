@@ -1,0 +1,13 @@
+.label {
+  display: flex;
+  justify-content: space-between;
+
+  &.focused {
+
+    .valute {
+      span {
+        color: #00C6FF;
+      }
+    }
+  }
+}
