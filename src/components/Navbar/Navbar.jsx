@@ -1,23 +1,23 @@
 import React from 'react'
 import classes from './Navbar.module.scss'
 
-import {NavLink} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export const Navbar = () => (
   <nav className={classes.nav}>
     <div className={classes.wrap}>
-      <NavLink to="/auth" className={`${classes.button} ${classes['button__auth']}`}>
+      <Link to="/auth" className={`${classes.button} ${classes['button__auth']}`}>
         <span>
-          <img src="/assets/img/person.svg" /> 
-          <span>Регистрация</span>
+          <img src="/assets/img/header/person.svg" /> 
+          <span>Sign up</span>
         </span>
-      </NavLink>
-      <NavLink to="/auth" className={`${classes.button}`}>
+      </Link>
+      <Link to="/auth" className={`${classes.button}`}>
         <span>
-          <img src="/assets/img/key.svg" /> 
-          <span>Вход</span>
+          <img src="/assets/img/header/key.svg" /> 
+          <span>Sign in</span>
         </span>
-      </NavLink>
+      </Link>
     </div>
   </nav>
 )

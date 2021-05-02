@@ -11,17 +11,17 @@ export const Header = () => {
       <div className={classes.wrap}>
         <div className={classes.logo}>
           <Link to="/">
-            <img src="/assets/img/logo.svg" />
+            <img src="/assets/img/header/logo.svg" />
           </Link>
         </div>
         <div className={classes.desc}>
           <p className={classes.item}>
-            <img src="/assets/img/robot.svg" />
-            <span>Автоматический обмен</span>
+            <img src="/assets/img/header/robot.svg" />
+            <span>Automatic exchange</span>
           </p>
           <p className={classes.item}>
-            <img src="/assets/img/always-time.svg" />
-            <span>Тех. поддержка</span>
+            <img src="/assets/img/header/always-time.svg" />
+            <span>Support</span>
           </p>
         </div>
       </div>

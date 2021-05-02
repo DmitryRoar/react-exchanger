@@ -1,4 +1,5 @@
 import React from 'react'
+import classes from './MainLayout.module.scss'
 
 import {Header} from '../../components/Header/Header'
 import {Footer} from '../../components/Footer/Footer'
@@ -8,8 +9,10 @@ export const MainLayout = ({children}) => {
   return (
     <>
       <Header />
-      <Sidebar />
-      {children}
+      <section className={classes.section}>
+        <Sidebar />
+        {children}
+      </section>
       <Footer />
     </>
   )

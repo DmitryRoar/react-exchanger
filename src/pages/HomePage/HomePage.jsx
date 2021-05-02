@@ -6,9 +6,9 @@ import {MainLayout} from '../../layouts/MainLayout/MainLayout'
 export const HomePage = () => {
   return (
     <MainLayout>
-      <section className={classes.section}>
-        section
-      </section>
+      <div className={classes.wrap}>
+        
+      </div>
     </MainLayout>
   )
 }

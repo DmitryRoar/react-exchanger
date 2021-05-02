@@ -1,0 +1,52 @@
+.sidebar {
+  height: 566px;
+  max-width: 186px;
+  min-width: 167px;
+  margin-right: 28px;
+  border-radius: 0px 0px 10px 10px;
+
+  ul {
+    position: relative;
+    margin-top: -20px;
+
+    li {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      padding: 20px 5px 20px 24px;
+
+      a {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        img {
+          margin-right: 12px;
+          box-sizing: content-box;
+          border-radius: 50%;
+          flex: 0 0 auto;
+        }
+
+        span {
+          color: rgb(24, 30, 69);
+          font: 400 14px / 16px Montserrat, sans-serif;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+
+.new {
+  position: absolute;
+  top: -5px;
+  left: -10px;
+
+  img {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    background-color: transparent !important;
+  }
+}

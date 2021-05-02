@@ -7,10 +7,13 @@ export const Footer = () => (
   <footer className={classes.footer}>
     <div className={classes.flex}>
       <span className={classes.copyright}>
-        @ Quickchange. Работаем с 2016 года
+        © Quickchange. We are working since 2016
       </span>
       <div className={classes.language}>
-        language change
+        <div className={classes.header}>
+          <img src="/assets/img/footer/globus.svg" />
+          <span>English</span> 
+        </div>
       </div>
     </div>
     <div className={classes.links}>
@@ -23,16 +26,16 @@ export const Footer = () => (
           rel="noreferrer noopener" 
           href="https://www.bestchange.ru/quickchange-exchanger.html"
         >
-          <span>Наши отзывы на</span>
-          <img src="/assets/img/best-change.svg" /> 
+          <span>Our reviews on</span>
+          <img src="/assets/img/footer/best-change.svg" /> 
         </a>
       </div>
       <div className={classes.right}>
         <Link to="/terms-of-use" className={classes.link}>
-          Пользовательское соглашение
+          Terms of use
         </Link>
         <Link to="/privacy" className={classes.link}>
-          Политика конфиденциальности
+          Privacy policy
         </Link>
       </div>
     </div>
