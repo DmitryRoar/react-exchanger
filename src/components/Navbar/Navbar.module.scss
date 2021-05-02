@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  padding-left: 18px;
+  padding-right: 18px;
+  background-color: rgb(251, 251, 251);
+  box-shadow: transparent 0px 0px 0px 1px inset;
+  flex-shrink: 0;
+  margin-left: 16px;
+  padding: 14px 18px;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+
+    img {
+      margin-right: 9px;
+    }
+  }
+
+  &__auth {
+    color: #fff;
+    background: rgb(226, 63, 101);
+    padding: 14px 28px;
+  }
+}
