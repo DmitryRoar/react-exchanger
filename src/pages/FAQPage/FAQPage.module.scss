@@ -1,0 +1,41 @@
+.item {
+  border-bottom: 1px solid rgb(210, 210, 210);
+  cursor: pointer;
+
+  &__title {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 19px 0px;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+      transition: .3s ease;
+    }
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 20px;
+    color: #393b53;
+    font-weight: 300;
+    padding-bottom: 20px;
+  }
+
+  &.active {
+    .item__title {
+      color: #e23f65;
+
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.items {
+  padding-right: 16px;
+  height: 430px;
+  overflow-y: auto;
+}

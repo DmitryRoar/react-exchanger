@@ -20,6 +20,12 @@
         display: flex;
         align-items: center;
         position: relative;
+        &.hovered {
+          color:#02b1e3;
+          span {
+            color: #02b1e3;
+          }
+        }
 
         img {
           margin-right: 12px;
