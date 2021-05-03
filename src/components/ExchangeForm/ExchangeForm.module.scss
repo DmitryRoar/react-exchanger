@@ -1,3 +1,7 @@
+.select {
+  margin-bottom: 16px;
+}
+
 .option {
   display: flex;
   align-items: center;
@@ -44,4 +48,49 @@
     color: rgb(153, 150, 167);
     border: none;
   }
+}
+
+.input-wrap {
+  display: flex;
+  border-bottom: 1px solid black;
+  align-items: flex-end;
+  padding-top: 16px;
+  justify-content: space-between;
+  font-size: 18px;
+
+  .input {
+    border: none;
+  }
+
+  .valute {
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+}
+
+.info {
+  margin-top: 16px;
+  min-height: 76px;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    display: flex;
+    margin-top: 8px;
+    padding-right: 10px;
+    font-size: 12px;
+    color: #867eac;
+  }
+
+  .range {
+    span {
+      &:last-child {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.input-border {
+  border-bottom: 1px solid black;; 
 }

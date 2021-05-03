@@ -15,3 +15,40 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.data {
+  margin-top: 26px;
+}
+
+.exchange {
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  &__text {
+    margin-bottom: 16px;
+    font-size: 12px;
+    color: #867eac;
+    text-align: center;
+
+    a {
+      text-decoration: underline;
+      color: #867eac;
+    }
+  }
+
+  button {
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background: #e23f65;
+
+    &:disabled {
+      background: #9996a7;
+    }
+  }
+}

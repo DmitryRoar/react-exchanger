@@ -1,38 +1,33 @@
 import React, {useState} from 'react'
 import classes from './Input.module.scss'
 
-export const Input = ({type = 'text', label}) => {
-  const [focused, setFocused] = useState(false) 
+export const Input = ({setValue, input, border = false}) => {
+  // input (label, type, maxLength)
+  const [focused, setFocused] = useState(false)
 
-  const cls = [classes.label]
+  const cls = [classes.input]
   if (focused) {
     cls.push(classes.focused)
   }
+  if (border) {
+    cls.push(classes.border)
+  }
+  console.log(cls)
   return (
     <>
-      {
-        label 
-        ? (
-          <label htmlFor="input" className={cls.join(' ')}>
-            {label}
-            <input 
-              type={type}
-              id="input" 
-              placeholder='hell'
-              onFocus={() => setFocused(true)} 
-            />
-            <div className={classes.valute}>
-              <span>ETH</span>  
-            </div>
-          </label>
-        )
-        : <input 
-          type={type}
+      <div className={cls.join(' ')} >
+      <label htmlFor="input">
+          {input.label}
+        </label>
+        <input 
+          type={input.type}
           id="input" 
-          placeholder='hell'
+          maxLength={input.maxLength}
           onFocus={() => setFocused(true)} 
+          onChange={e => setValue(e.target.value)}
         />
-      }
+      </div>
+
       <div className={classes.validation}></div>
     </>
   )

@@ -1,13 +1,34 @@
-.label {
+.input {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-bottom: 8px;
 
-  &.focused {
+  &, input {
+    width: 92%;
+  }
 
-    .valute {
-      span {
-        color: #00C6FF;
-      }
+  label {
+    font-size: 13px;
+  }
+
+  input {
+    font-size: 17px !important;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &.border {
+    width: 100%;
+
+    input {
+      border-bottom: 1px solid black;
+      padding: 16px 0 8px 0;
+      width: 100%;
     }
   }
 }
