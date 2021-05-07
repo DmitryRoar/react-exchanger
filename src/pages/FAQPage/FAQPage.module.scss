@@ -1,5 +1,7 @@
+@import '../../styles/vars';
+
 .item {
-  border-bottom: 1px solid rgb(210, 210, 210);
+  border-bottom: 1px solid $light-modified;
   cursor: pointer;
 
   &__title {
@@ -18,14 +20,14 @@
   &__content {
     font-size: 14px;
     line-height: 20px;
-    color: #393b53;
+    color: $primary-second-modified;
     font-weight: 300;
     padding-bottom: 20px;
   }
 
   &.active {
     .item__title {
-      color: #e23f65;
+      color: $accent;
 
       img {
         transform: rotate(180deg);

@@ -1,3 +1,5 @@
+@import '../../styles/vars';
+
 .input {
   display: flex;
   align-items: flex-start;
@@ -26,7 +28,7 @@
     width: 100%;
 
     input {
-      border-bottom: 1px solid black;
+      border-bottom: 1px solid $dark;
       padding: 16px 0 8px 0;
       width: 100%;
     }

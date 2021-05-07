@@ -1,3 +1,5 @@
+@import '../../styles/vars';
+
 .sidebar {
   height: 566px;
   max-width: 186px;
@@ -20,14 +22,16 @@
         display: flex;
         align-items: center;
         position: relative;
-        &.hovered {
-          color:#02b1e3;
+        &:hover {
           span {
-            color: #02b1e3;
+            color: $primary-third
+          }
+          .svg {
+            fill: $primary-third
           }
         }
 
-        img {
+        .svg {
           margin-right: 12px;
           box-sizing: content-box;
           border-radius: 50%;
@@ -35,7 +39,7 @@
         }
 
         span {
-          color: rgb(24, 30, 69);
+          color: $primary-notify;
           font: 400 14px / 16px Montserrat, sans-serif;
           white-space: nowrap;
         }
@@ -49,7 +53,7 @@
   top: -5px;
   left: -10px;
 
-  img {
+  .svg {
     margin: 0px;
     padding: 0px;
     position: relative;
@@ -58,10 +62,10 @@
 }
 
 .active {
-  img {
-    background-color: #e23f65 !important;
+  .svg {
+    fill: $accent !important;
   }
   span {
-    color: #e23f65 !important;
+    color: $accent !important;
   }
 }

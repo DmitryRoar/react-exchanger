@@ -1,3 +1,5 @@
+@import '../../styles/vars';
+
 .section {
   overflow-y: auto;
   max-height: 430px;
@@ -10,7 +12,7 @@
     margin-bottom: 12px;
   }
   p {
-    color: #393b53;
+    color: $primary-second-modified;
     margin-bottom: 28px;
   }
 }

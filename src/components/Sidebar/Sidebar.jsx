@@ -3,6 +3,8 @@ import classes from './Sidebar.module.scss'
 
 import {NavLink} from 'react-router-dom'
 
+import {SvgIcon} from '../SvgIcon/SvgIcon'
+
 export const Sidebar = () => {
   const [pages] = useState([
     {icon: 'trade', link: '', name: 'Exchange', new: false},
@@ -23,17 +25,12 @@ export const Sidebar = () => {
                 exact 
                 activeClassName={classes.active}
               >
-                <img 
-                  style={{
-                    WebkitMask: `url(/assets/img/sidebar/${page.icon}.svg) no-repeat center`,
-                    width: 24, height: 24, backgroundColor: "#000"
-                  }} 
-                />
+                <SvgIcon icon={page.icon} section="sidebar" width="24" customClass={classes.svg} />
                 <span>{page.name}</span>
                 {
                   page.new && (
                     <div className={classes.new}>
-                      <img src="/assets/img/sidebar/new.svg" />
+                      <SvgIcon icon="new-page" width="24" />
                     </div>
                   )
                 }

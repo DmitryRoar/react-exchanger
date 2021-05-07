@@ -12,7 +12,6 @@ export const Input = ({setValue, input, border = false}) => {
   if (border) {
     cls.push(classes.border)
   }
-  console.log(cls)
   return (
     <>
       <div className={cls.join(' ')} >

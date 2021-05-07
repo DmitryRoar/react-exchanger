@@ -1,3 +1,5 @@
+@import '../../styles/vars';
+
 .nav {
   display: flex;
 }
@@ -10,7 +12,7 @@
 .button {
   padding-left: 18px;
   padding-right: 18px;
-  background-color: rgb(251, 251, 251);
+  background-color: $light-modified;
   box-shadow: transparent 0px 0px 0px 1px inset;
   flex-shrink: 0;
   margin-left: 16px;
@@ -25,14 +27,14 @@
     justify-content: center;
     white-space: nowrap;
 
-    img {
+    .svg {
       margin-right: 9px;
     }
   }
 
   &__auth {
-    color: #fff;
-    background: rgb(226, 63, 101);
+    color: $light;
+    background: $accent;
     padding: 14px 28px;
   }
 }

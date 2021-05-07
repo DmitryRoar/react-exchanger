@@ -1,6 +1,8 @@
+@import '../../styles/vars';
+
 .info {
   overflow-y: auto;
-  color: #393b53;
+  color: $primary-second-modified;
 
   h3 {
     font: bold 24px / 28px Montserrat, sans-serif;

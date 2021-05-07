@@ -1,17 +1,33 @@
 import React, {useState} from 'react'
-import { Input } from '../Input/Input'
-import { Loader } from '../Loader/Loader'
+
 import classes from './ExchangeForm.module.scss'
+
+import {Input} from '../Input/Input'
+import {Loader} from '../Loader/Loader'
+
+import {SvgIcon} from '../../components/SvgIcon/SvgIcon'
 
 export const ExchangeForm = ({input}) => {
   // prop drilling :)
   const [dropDown, setDropDown] = useState(false) 
   const [count, setCount] = useState('')
-  const [option, setOption] = useState({
+  const [activeOption, setActiveOption] = useState({
     icon: 'bitcoin',
-    name: 'Bitcoin BTC',
+    name: 'Bitcoin',
     valute: 'BTC'
   })
+  const [options, setOptions] = useState([
+    {
+      icon: 'bitcoin',
+      name: 'Bitcoin',
+      valute: 'BTC'
+    },
+    {
+      icon: 'ethereum',
+      name: 'Ethereum',
+      valute: 'ETH'
+    }
+  ])
 
   const activeCls = []
   if (dropDown) {
@@ -23,7 +39,7 @@ export const ExchangeForm = ({input}) => {
   }
 
   const changeOptionHandler = option => {
-    setOption({icon: option.icon, name: option.name})
+    setActiveOption(option)
     setDropDown(false)
   }
 
@@ -32,27 +48,25 @@ export const ExchangeForm = ({input}) => {
       <div className={classes.select}>
         <div className={`${classes.option} ${activeCls.join(' ')}`} onClick={dropDownHandler}>
           <div className={classes.img}>
-            <img src={`/assets/img/exchange/form/${option.icon}.svg`} />
+            <img src={`/assets/img/exchange/form/${activeOption.icon}.svg`} />
           </div>
-          <span>{option.name}</span>
-          <img src="/assets/img/exchange/form/arrow.svg" className={classes.arrow} /> 
+          <span>{activeOption.name} {activeOption.valute}</span>
+          <SvgIcon icon="arrow" customClass={classes.arrow} width="17" height="10" section="exchange" />
         </div>
 
         {
           dropDown && (
             <div className={classes.dropdown}>
-                <div className={classes.option} onClick={changeOptionHandler.bind(null, {name: 'Bitcoin BTC', icon: 'bitcoin'})}>
-                  <div className={classes.img}>
-                    <img src="/assets/img/exchange/form/bitcoin.svg" />
+              {
+                options.map((option, idx) => (
+                  <div key={idx} className={classes.option} onClick={changeOptionHandler.bind(null, option)}>
+                      <div className={classes.img}>
+                      <img src={`/assets/img/exchange/form/${option.icon}.svg`} />
+                    </div>
+                    <span>{option.name} {option.valute}</span>
                   </div>
-                  <span>Bitcoin BTC</span>
-                </div>            
-                <div className={classes.option} onClick={changeOptionHandler.bind(null, {name: 'Ethereum', icon: 'ethereum'})}>
-                <div className={classes.img}>
-                  <img src="/assets/img/exchange/form/ethereum.svg" />
-                </div>
-                <span>Ethereum ETH</span>
-                </div>
+                ))
+              }
             </div>
           )
         }
