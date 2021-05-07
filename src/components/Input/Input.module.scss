@@ -1,9 +1,7 @@
 @import '../../styles/vars';
 
 .input {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  position: relative;
   padding-bottom: 8px;
 
   &, input {
@@ -12,6 +10,14 @@
 
   label {
     font-size: 13px;
+    position: absolute;
+    bottom: calc(10px + 8px);
+    transition: .5s;
+    transition: 
+      color .2s,
+      top .2s,
+      bottom .2s;
+    user-select: none;
   }
 
   input {
@@ -31,6 +37,14 @@
       border-bottom: 1px solid $dark;
       padding: 16px 0 8px 0;
       width: 100%;
+    }
+  }
+
+  &.focused {
+    color: $primary;
+
+    label {
+      top: 0;
     }
   }
 }

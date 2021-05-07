@@ -47,6 +47,7 @@
     font-weight: 700;
     color: $light;
     background: $accent;
+    transition: .5s;
 
     &:disabled {
       background: $segment-modified;

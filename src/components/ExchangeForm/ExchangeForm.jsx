@@ -7,10 +7,8 @@ import {Loader} from '../Loader/Loader'
 
 import {SvgIcon} from '../../components/SvgIcon/SvgIcon'
 
-export const ExchangeForm = ({input}) => {
-  // prop drilling :)
+export const ExchangeForm = ({value, setValue}) => {
   const [dropDown, setDropDown] = useState(false) 
-  const [count, setCount] = useState('')
   const [activeOption, setActiveOption] = useState({
     icon: 'bitcoin',
     name: 'Bitcoin',
@@ -73,9 +71,9 @@ export const ExchangeForm = ({input}) => {
       </div>
 
       <div className={classes['input-wrap']}>
-        <Input input={input} setValue={setCount} />
+        <Input type="number" value={value} maxLength="44" setValue={setValue} />
         <div className={classes.valute}>
-          <span>ETH</span>  
+          <span>{activeOption.valute}</span>  
         </div>
       </div>
 
