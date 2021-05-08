@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import classes from './Input.module.scss'
 
 export const Input = ({value, setValue, label, type, maxLength, border = false}) => {
-  // input (label, type, maxLength)
   const [focused, setFocused] = useState(false)
 
   const cls = [classes.input]
