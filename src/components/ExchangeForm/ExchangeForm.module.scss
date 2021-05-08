@@ -43,6 +43,7 @@
 }
 
 .dropdown {
+  animation: dropdown .6s forwards ease-in-out;
   background: $light;
   width: 100%;
   z-index: 10;
@@ -102,4 +103,9 @@
 
 .input-border {
   border-bottom: 1px solid $dark; 
+}
+
+@keyframes dropdown {
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
